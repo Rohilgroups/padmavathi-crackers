@@ -269,7 +269,8 @@ const FirstPageContent = () => {
               <Box
                 component="img"
                 src={crackersImage}
-                alt="Harish Crackers Showcase"
+                alt="Best Sivakasi Crackers Online"
+                loading="lazy"
                 sx={{
                   width: "100%",
                   height: "100%",

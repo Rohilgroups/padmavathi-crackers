@@ -4,6 +4,7 @@ import {
   Route,
   useLocation,
 } from "react-router-dom";
+import { HelmetProvider } from 'react-helmet-async';
 
 import "./App.css";
 import Header from "./components/Header";
@@ -48,8 +49,8 @@ function ConditionalHeader() {
 
 function App() {
   return (
-
-    <Router>
+    <HelmetProvider>
+      <Router>
       <ConditionalHeader />
       <Routes>
         <Route path="/" element={<FirstPage />} />
@@ -65,8 +66,8 @@ function App() {
       </Routes>
       <ConditionalFooter />
       <ConditionalFloatingButtons />
-    </Router>
-    
+      </Router>
+    </HelmetProvider>
   );
 }
 
