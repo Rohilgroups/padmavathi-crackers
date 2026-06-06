@@ -16,7 +16,7 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { useNavigate } from "react-router-dom";
 import { colors } from "../colors";
 
-import singlesound from "../assets/images/singlesound.jpg";
+import singlesound from "../assets/images/premium-crackers-online-india.jpg";
 import chakkers from "../assets/images/chakkers.jpg";
 import flowerpots from "../assets/images/flowerpots.jpg";
 import garland from "../assets/images/garland.jpg";
@@ -26,7 +26,7 @@ import pencilCrackers from "../assets/images/pencilCrackers.jpg";
 import rocket from "../assets/images/rocket.jpg";
 import fancyfountain from "../assets/images/fancyfountain.jpg";
 import Bombs from "../assets/images/Bombs.png";
-import giftbox from "../assets/images/giftbox.jpg";
+import giftbox from "../assets/images/latest-sivakasi-fancy-crackers.jpg";
 import skyshot from "../assets/images/skyshot.jpg";
 
 const ShowProduct = () => {

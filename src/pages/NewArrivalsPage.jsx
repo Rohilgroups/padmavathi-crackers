@@ -19,20 +19,24 @@ import {
   Link,
 } from "@mui/material";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router-dom"; // Add this import
 import LocalOfferIcon from "@mui/icons-material/LocalOffer";
 import NewReleasesIcon from "@mui/icons-material/NewReleases";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import SecurityIcon from "@mui/icons-material/Security";
+import CelebrationIcon from "@mui/icons-material/Celebration";
+import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
+import VerifiedUserIcon from "@mui/icons-material/VerifiedUser";
 import { colors } from "../colors";
 
 // Placeholder images - Replace with your actual new arrival product images
-import newArrival1 from "../assets/images/giftbox.jpg";
-import newArrival2 from "../assets/images/colors.jpg";
-import newArrival3 from "../assets/images/singlesound.jpg";
-import newArrival4 from "../assets/images/dulex.jpg";
-import bannerImage from "../assets/banner/newArrival.jpg";
+import newArrival1 from "../assets/images/latest-sivakasi-fancy-crackers.jpg";
+import newArrival2 from "../assets/images/new-arrival-fireworks-collection.jpg";
+import newArrival3 from "../assets/images/premium-crackers-online-india.jpg";
+import newArrival4 from "../assets/images/deluxe-sparklers-assortment-2026.jpg";
+import bannerImage from "../assets/banner/new-arrival-sivakasi-crackers-banner.jpg";
 
 const newArrivalsData = [
   {
@@ -41,6 +45,7 @@ const newArrivalsData = [
     description:
       "Attractive gift box with a list at the rear showing the crackers inside. Safe and economically priced.",
     image: newArrival1,
+    altText: "Latest Sivakasi Fancy Crackers",
     discount: "80%",
     rating: 4.8,
     reviews: 128,
@@ -53,6 +58,7 @@ const newArrivalsData = [
     description:
       "New arrival crackers with tremendous color effects. Quality with zero failure guarantee.",
     image: newArrival2,
+    altText: "New Arrival Fireworks Collection",
     discount: "80%",
     rating: 4.9,
     reviews: 95,
@@ -65,6 +71,7 @@ const newArrivalsData = [
     description:
       "High-quality sound crackers from our Sivakasi online pattasu shopping store. Zero failure assured.",
     image: newArrival3,
+    altText: "Premium Crackers Online India",
     discount: "80%",
     rating: 4.7,
     reviews: 156,
@@ -77,6 +84,7 @@ const newArrivalsData = [
     description:
       "A variety of sparklers for a sparkling celebration. Best price online crackers shop in Sivakasi.",
     image: newArrival4,
+    altText: "Latest Sivakasi Fancy Crackers",
     discount: "80%",
     rating: 4.8,
     reviews: 112,
@@ -134,6 +142,10 @@ const NewArrivalsPage = () => {
 
   return (
     <>
+      <Helmet>
+        <title>New Arrival Crackers 2026 | Latest Sivakasi Fireworks Online</title>
+        <meta name="description" content="Explore the latest Sivakasi crackers and fireworks at Sri Padmavathi Crackers. Shop new arrivals, premium fancy crackers, gift boxes, and festival specials at the best prices." />
+      </Helmet>
       {/* Hero Banner Section */}
       <Box
         sx={{
@@ -165,7 +177,7 @@ const NewArrivalsPage = () => {
         <Box sx={{ position: "relative", zIndex: 2, px: 3 }}>
           <Typography
             variant={isMobile ? "h3" : "h2"}
-            component="h1"
+            component="h2"
             sx={{
               fontWeight: "bold",
               mb: 2,
@@ -241,18 +253,18 @@ const NewArrivalsPage = () => {
                   variant="h1"
                   sx={{
                     fontWeight: 800,
-                    fontSize: { xs: "2.5rem", sm: "3.5rem", md: "4rem" },
+                    fontSize: { xs: "2.5rem", sm: "3rem", md: "3.5rem" },
                     lineHeight: 1.1,
                     mb: 2,
                     color: colors.darkRed,
                   }}
                 >
-                  New Arrival
+                  Latest Sivakasi Crackers &amp; Fireworks
                   <Box
                     component="span"
-                    sx={{ color: colors.primaryRed, display: "block" }}
+                    sx={{ color: colors.primaryRed, display: "block", fontSize: { xs: "2rem", sm: "2.5rem", md: "3rem" }, mt: 1 }}
                   >
-                    Crackers 2026
+                    New Arrivals 2026
                   </Box>
                 </Typography>
 
@@ -483,8 +495,7 @@ const NewArrivalsPage = () => {
                   textAlign: "center",
                 }}
               >
-                Explore Our{" "}
-                <span style={{ color: colors.primaryRed }}>New Collection</span>
+                <span style={{ color: colors.primaryRed }}>Trending</span> Crackers Collection
               </Typography>
               <Typography
                 sx={{
@@ -555,7 +566,8 @@ const NewArrivalsPage = () => {
                         component="img"
                         height="240"
                         image={product.image}
-                        alt={product.name}
+                        alt={product.altText}
+                        loading="lazy"
                         className="product-image"
                         sx={{
                           transition: "transform 0.6s ease",
@@ -744,6 +756,74 @@ const NewArrivalsPage = () => {
                 </Box>
               ))}
             </Box>
+          </Box>
+
+          {/* SEO Content Sections */}
+          <Box sx={{ mt: 8, mb: 6 }}>
+            <motion.div {...fadeInUp}>
+              <Box 
+                sx={{ 
+                  display: "flex", 
+                  flexDirection: { xs: "column", md: "row" }, 
+                  gap: 4 
+                }}
+              >
+                {[
+                  {
+                    title: "New Fancy Crackers",
+                    desc: "Elevate your celebrations with our latest range of new fancy crackers. Designed to produce mesmerizing visual effects and vibrant colors, these innovative additions will leave your guests spellbound. Discover new sparklers, color-changing fountains, and multi-shot aerials that redefine festive joy.",
+                    icon: <AutoAwesomeIcon sx={{ fontSize: 36, color: colors.primaryRed }} />
+                  },
+                  {
+                    title: "Festival Special Fireworks",
+                    desc: "Make every moment count with our festival special fireworks collection. Whether it's Diwali, New Year, or a grand wedding, our specially curated fireworks provide unmatched brilliance and powerful sound. We bring authentic Sivakasi quality directly to your doorstep for a memorable celebration.",
+                    icon: <CelebrationIcon sx={{ fontSize: 36, color: colors.warningYellow }} />
+                  },
+                  {
+                    title: "Why Choose Sri Padmavathi Crackers",
+                    desc: "As a trusted name in Sivakasi fireworks, Sri Padmavathi Crackers offers premium quality products with zero failure rates. We guarantee 100% safe, certified products and free delivery on eligible orders. Experience hassle-free online shopping and get the best discounts on our latest crackers collection.",
+                    icon: <VerifiedUserIcon sx={{ fontSize: 36, color: colors.successGreen }} />
+                  }
+                ].map((item, index) => (
+                  <Paper 
+                    key={index}
+                    elevation={0}
+                    sx={{
+                      flex: 1,
+                      p: 4,
+                      borderRadius: 4,
+                      bgcolor: colors.lightBlueGray,
+                      border: `1px solid ${colors.gray70}`,
+                      transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                      "&:hover": {
+                        transform: "translateY(-5px)",
+                        boxShadow: `0 15px 35px rgba(0,0,0,0.06)`,
+                      }
+                    }}
+                  >
+                    <Box sx={{ display: 'flex', alignItems: 'center', mb: 3, gap: 2 }}>
+                      <Box 
+                        sx={{ 
+                          p: 1.5, 
+                          borderRadius: '50%', 
+                          bgcolor: colors.white, 
+                          display: 'flex', 
+                          boxShadow: '0 4px 12px rgba(0,0,0,0.08)' 
+                        }}
+                      >
+                        {item.icon}
+                      </Box>
+                      <Typography variant="h2" sx={{ fontWeight: 800, fontSize: { xs: "1.5rem", md: "1.7rem" }, color: colors.darkGray, lineHeight: 1.2 }}>
+                        {item.title}
+                      </Typography>
+                    </Box>
+                    <Typography sx={{ color: colors.gray60, fontSize: "1rem", lineHeight: 1.8 }}>
+                      {item.desc}
+                    </Typography>
+                  </Paper>
+                ))}
+              </Box>
+            </motion.div>
           </Box>
 
           {/* Bottom CTA Section */}
