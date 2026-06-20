@@ -1,5 +1,6 @@
 // src/pages/ContactPage.jsx
 import React, { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import {
   Box,
   Container,
@@ -153,6 +154,76 @@ ${formData.message}
 
   return (
     <>
+      <Helmet>
+        <title>Contact Sri Padmavathi Crackers | Sivakasi Crackers Store</title>
+        <meta
+          name="description"
+          content="Contact Sri Padmavathi Crackers for premium Sivakasi crackers, fireworks orders, price list enquiries, and customer support. Reach us today for festive celebrations."
+        />
+        <link rel="canonical" href="https://sripadmavathicrackers.com/contact" />
+        
+        {/* Open Graph Tags */}
+        <meta property="og:title" content="Contact Sri Padmavathi Crackers | Sivakasi Crackers Store" />
+        <meta property="og:description" content="Contact Sri Padmavathi Crackers for premium Sivakasi crackers, fireworks orders, price list enquiries, and customer support. Reach us today for festive celebrations." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://sripadmavathicrackers.com/contact" />
+        <meta property="og:site_name" content="Sri Padmavathi Crackers" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Contact Sri Padmavathi Crackers | Sivakasi Crackers Store" />
+        <meta name="twitter:description" content="Contact Sri Padmavathi Crackers for premium Sivakasi crackers, fireworks orders, price list enquiries, and customer support. Reach us today for festive celebrations." />
+
+        {/* Schema.org Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FireworksStore",
+            "name": "Sri Padmavathi Crackers",
+            "url": "https://sripadmavathicrackers.com",
+            "telephone": "+919952561300",
+            "email": "padmavathicrackers@gmail.com",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "14/496/8, Anuppankulam",
+              "addressLocality": "Sivakasi",
+              "postalCode": "626189",
+              "addressRegion": "Tamil Nadu",
+              "addressCountry": "IN"
+            },
+            "contactPoint": [
+              {
+                "@type": "ContactPoint",
+                "telephone": "+919952561300",
+                "contactType": "customer support",
+                "areaServed": "IN",
+                "availableLanguage": ["English", "Tamil"]
+              },
+              {
+                "@type": "ContactPoint",
+                "telephone": "+919655121440",
+                "contactType": "customer support",
+                "areaServed": "IN",
+                "availableLanguage": ["English", "Tamil"]
+              }
+            ]
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ContactPage",
+            "name": "Contact Sri Padmavathi Crackers | Sivakasi Crackers Store",
+            "description": "Contact Sri Padmavathi Crackers for premium Sivakasi crackers, fireworks orders, price list enquiries, and customer support.",
+            "url": "https://sripadmavathicrackers.com/contact",
+            "mainEntity": {
+              "@type": "FireworksStore",
+              "name": "Sri Padmavathi Crackers"
+            }
+          })}
+        </script>
+      </Helmet>
+
       {/* Hero Banner Section */}
       <Box
         sx={{
