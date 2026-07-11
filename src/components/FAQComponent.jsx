@@ -11,8 +11,6 @@ import {
 import { motion, AnimatePresence } from "framer-motion";
 import { colors } from "../colors";
 
-import { Helmet } from "react-helmet-async";
-
 // Icons
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
@@ -162,22 +160,6 @@ const FAQComponent = () => {
         overflow: "hidden",
       }}
     >
-      <Helmet>
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": faqs.map(faq => ({
-              "@type": "Question",
-              "name": faq.question,
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": faq.answer
-              }
-            }))
-          })}
-        </script>
-      </Helmet>
       {/* Background Decorative Elements */}
       <Box
         sx={{

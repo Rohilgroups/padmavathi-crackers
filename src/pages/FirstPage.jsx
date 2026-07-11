@@ -8,7 +8,6 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
-import { Link } from "react-router-dom";
 import { colors } from "../colors";
 
 // Import your banner image (adjust path as needed)
@@ -22,8 +21,8 @@ import CustomerReviews from "../components/CustomerReviews";
 import FirstPageContent from "../components/FirstPageContent";
 import FAQComponent from "../components/FAQComponent";
 import AboutVisionSection from "../components/AboutVisionSection";
-import WhyChooseUs from "../components/WhyChooseUs";
-import LocalSEOInfo from "../components/LocalSEOInfo";
+import SeoContent from "../components/SeoContent";
+import SocialShare from "../components/SocialShare";
 import { Helmet } from "react-helmet-async";
 
 export default function FirstPage() {
@@ -31,38 +30,33 @@ export default function FirstPage() {
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   const isTablet = useMediaQuery(theme.breakpoints.between("sm", "md"));
 
-  const organizationSchema = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Sri Padmavathi Crackers",
-    "url": "https://sripadmavathicrackers.com",
-    "logo": "https://sripadmavathicrackers.com/logo.png"
-  };
-
-  const localBusinessSchema = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Sri Padmavathi Crackers",
-    "image": "https://sripadmavathicrackers.com/store.jpg",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Annupankulam 14, 496/8, Kaliappa Nagar",
-      "addressLocality": "Sivakasi",
-      "addressRegion": "Tamil Nadu",
-      "postalCode": "626189",
-      "addressCountry": "IN"
-    },
-    "telephone": "+91-9952561300"
-  };
-
   return (
     <Box sx={{ width: "100%", overflow: "hidden" }}>
       <Helmet>
-        <title>Sri Padmavathi Crackers | Best Sivakasi Crackers Online Store 2026</title>
-        <meta name="description" content="Buy premium Sivakasi crackers online at best prices from Sri Padmavathi Crackers. Download 2026 price list, quick order, and enjoy safe doorstep delivery across India." />
-        <meta name="keywords" content="Sivakasi Crackers Online, Best Crackers Shop in Sivakasi, Buy Crackers Online, Online Crackers Store, Diwali Crackers Online, Fancy Crackers, Kids Crackers, Wholesale Crackers, Festival Crackers, Fireworks Shop, Sivakasi Crackers Tamil Nadu, Crackers Shop Near Me, Online Crackers Delivery India" />
-        <script type="application/ld+json">{JSON.stringify(organizationSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(localBusinessSchema)}</script>
+        <title>Sri Padmavathi Crackers - Premium Quality Crackers in Sivakasi</title>
+        <meta name="description" content="Buy premium quality crackers online from Sri Padmavathi Crackers, Sivakasi. Get the best prices, safe delivery, and exciting festival offers on all fireworks." />
+        <link rel="canonical" href="https://www.sripadmavathicrackers.com/" />
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "FireStation",
+              "name": "Sri Padmavathi Crackers",
+              "image": "https://www.sripadmavathicrackers.com/assets/logo.png",
+              "@id": "",
+              "url": "https://www.sripadmavathicrackers.com/",
+              "telephone": "",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Sivakasi",
+                "addressLocality": "Sivakasi",
+                "addressRegion": "TN",
+                "postalCode": "626123",
+                "addressCountry": "IN"
+              }
+            }
+          `}
+        </script>
       </Helmet>
       {/* Full Width Banner */}
 
@@ -93,58 +87,46 @@ export default function FirstPage() {
       >
         <Container sx={{ position: "relative", zIndex: 2, textAlign: "center" }}>
           <Typography
+            variant={isMobile ? "h3" : "h1"}
+            component="h2"
+            sx={{
+              fontWeight: 900,
+              textTransform: "uppercase",
+              letterSpacing: "0.1em",
+              mb: 1,
+              textShadow: "2px 2px 10px rgba(0,0,0,0.5)",
+            }}
+          >
+            Sri Padmavathi Crackers
+          </Typography>
+          <Typography
+            variant={isMobile ? "h5" : "h3"}
             component="h1"
             sx={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
+              fontWeight: 700,
+              textTransform: "uppercase",
               mb: 4,
+              color: colors.warningYellow,
             }}
           >
-            <Box
-              component="span"
-              sx={{
-                fontSize: { xs: "1.8rem", md: "3.5rem" },
-                fontWeight: 900,
-                textTransform: "uppercase",
-                letterSpacing: "0.05em",
-                mb: 1,
-                textShadow: "2px 2px 10px rgba(0,0,0,0.5)",
-                color: colors.white,
-              }}
-            >
-              Best Sivakasi Crackers Online Store
-            </Box>
-            <Box
-              component="span"
-              sx={{
-                fontSize: { xs: "1.3rem", md: "2.5rem" },
-                fontWeight: 700,
-                textTransform: "uppercase",
-                color: colors.warningYellow,
-                textShadow: "2px 2px 8px rgba(0,0,0,0.6)",
-              }}
-            >
-              – Sri Padmavathi Crackers
-            </Box>
+            Premium Quality Crackers in Sivakasi
           </Typography>
           <Box sx={{ display: "flex", gap: 2, justifyContent: "center", flexWrap: "wrap" }}>
-          <Button
-            variant="contained"
-            size="large"
-            component={Link}
-            to="/home"
-            sx={{
-              bgcolor: colors.primaryRed,
-              px: 4,
-              py: 1.5,
-              fontWeight: 800,
-              fontSize: "1.1rem",
-              "&:hover": { bgcolor: colors.darkRed },
-            }}
-          >
-            ORDER ONLINE
-          </Button>
+            <Button
+              variant="contained"
+              size="large"
+              sx={{
+                bgcolor: colors.primaryRed,
+                px: 4,
+                py: 1.5,
+                fontWeight: 800,
+                fontSize: "1.1rem",
+                "&:hover": { bgcolor: colors.darkRed },
+              }}
+              href="/home"
+            >
+              ORDER ONLINE
+            </Button>
             <Button
               variant="outlined"
               size="large"
@@ -167,14 +149,15 @@ export default function FirstPage() {
           </Box>
         </Container>
       </Box>
+      {/* Optional: Add some content below the banner */}
       <FirstPageContent />
+      <SeoContent />
       <AboutVisionSection />
       <ShowProduct />
-      <WhyChooseUs />
       <BrandsLogo />
       <SpecialOffer />
-      <LocalSEOInfo />
       <CustomerReviews />
+      <SocialShare />
       <FAQComponent />
     </Box>
   );

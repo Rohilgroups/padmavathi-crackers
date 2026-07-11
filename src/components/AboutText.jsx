@@ -70,32 +70,32 @@ const AboutText = () => {
 
   const sections = [
     {
-      title: "Our Mission",
-      text: "Sri Padmavathi CRACKERS has a rich history as a leading Sivakasi crackers manufacturer with over 25 years of experience. Rooted in the fireworks capital of India, our mission is to provide an exquisite collection of high-quality Sivakasi crackers that adds sparkle and joy to every celebration. We source directly from our manufacturing unit, maintaining a strong Sivakasi connection to deliver an authentic festival experience with maximum customer satisfaction.",
+      title: "About Us",
+      text: "Sri Padmavathi CRACKERS is a leading and famous Sivakasi crackers manufacturer, the premier online crackers shop Sivakasi. Our unique and exquisite collection of high-quality Sivakasi online crackers will add sparkle and joy to your celebration. We are sourced directly from the manufacturing unit, ensuring top-notch quality and safety. Make your online crackers purchase sivakasi from the most trusted shop in Sri Padmavathi CRACKERS are good in quality and the best price online sivakasi crackers shop.",
       image: aboutImg1,
       icon: <StarIcon />,
       bgColor: colors.lightBlueGray,
       imagePosition: "right",
     },
     {
-      title: "Festival Crackers Collection",
-      text: "Explore a huge collection of fancy crackers, sparklers, and family packs at your fingertips. Our online fireworks store is a one-stop destination for all your festival needs. We ensure our customers are 100% satisfied with our universal range of products, perfectly curated to light up your Diwali celebration. We also give importance to eco-friendly green crackers for environmental protection.",
+      title: "Sivakasi Crackers Online",
+      text: "Welcome to Sri Padmavathi CRACKERS is Sivakasi online crackers shop, a one-stop destination for all your festival needs. Explore a huge collection of Sivakasi crackers and sparklers at your fingertips. Enjoy crackers online shopping and discover a universal range of Sivakasi online crackers waiting for you to light up that sparkle to your Diwali celebration. Sivakasi crackers online have long been a part of celebrations and cultural events around the world, with each culture having its unique traditions and practices. We give more importance to the eco-friendly Sivakasi green crackers environment and customer safety.",
       image: aboutImg2,
       icon: <SpaIcon />,
       bgColor: colors.white,
       imagePosition: "left",
     },
     {
-      title: "Quality & Safety",
-      text: "We take pride in our rigorous quality control and high safety standards. Every cracker that leaves our facility undergoes multiple safety checks. Our team carefully monitors the manufacturing process from raw material selection to final packaging, guaranteeing that you receive only the safest, best products for your children and family to enjoy a safe celebration.",
+      title: "Quality Assurance",
+      text: "We take pride in our rigorous quality control process. Every cracker that leaves our facility undergoes multiple safety checks to ensure it meets the highest standards. Our team of experts carefully monitors the manufacturing process, from raw material selection to final packaging, guaranteeing that you receive only the best products for your celebrations.",
       image: aboutImg3,
       icon: <SafetyCheckIcon />,
       bgColor: colors.lightBlueGray,
       imagePosition: "right",
     },
     {
-      title: "Online Crackers Delivery",
-      text: "With our efficient logistics network, we ensure that your crackers reach you in perfect condition and on time. Our extensive delivery coverage allows us to offer PAN India online crackers delivery with real-time tracking. Special secure packaging keeps your fireworks safe during transit, ensuring hassle-free and affordable pricing for everyone.",
+      title: "Fast Delivery",
+      text: "With our efficient logistics network, we ensure that your crackers reach you in perfect condition and on time. We understand the excitement of festival preparations, which is why we offer PAN India delivery with real-time tracking. Our special packaging ensures that your crackers remain safe during transit, so you can focus on celebrating.",
       image: aboutImg4,
       icon: <LocalShippingIcon />,
       bgColor: colors.white,
@@ -314,6 +314,7 @@ const AboutText = () => {
           <Box sx={{ position: "relative", zIndex: 1 }}>
             <Typography
               variant={isMobile ? "h4" : isTablet ? "h3" : "h2"}
+              component="h2"
               sx={{
                 fontWeight: 800,
                 mb: { xs: 1, sm: 2 },
@@ -425,8 +426,8 @@ const AboutText = () => {
 
               {/* Title */}
               <Typography
-                component="h2"
                 variant={isMobile ? "h5" : "h4"}
+                component="h3"
                 sx={{
                   color: colors.primaryRed,
                   fontWeight: 700,
@@ -511,8 +512,7 @@ const AboutText = () => {
               <Box
                 component="img"
                 src={section.image}
-                alt={`${section.title} - Sri Padmavathi Crackers Sivakasi`}
-                loading="lazy"
+                alt={section.title}
                 sx={{
                   width: "100%",
                   height: "100%",
@@ -599,7 +599,7 @@ const AboutText = () => {
           {[
             {
               number: "25+",
-              label: "Years of Experience",
+              label: "Years of Excellence",
               icon: <StarIcon />,
               delay: "0s",
             },
@@ -610,14 +610,14 @@ const AboutText = () => {
               delay: "0.2s",
             },
             {
-              number: "100%",
-              label: "Quality Certified",
+              number: "100+",
+              label: "Product Varieties",
               icon: <SafetyCheckIcon />,
               delay: "0.4s",
             },
             {
-              number: "100%",
-              label: "Secure Payments",
+              number: "24/7",
+              label: "Customer Support",
               icon: <LocalShippingIcon />,
               delay: "0.6s",
             },
@@ -665,6 +665,7 @@ const AboutText = () => {
               <Typography
                 className="stat-number"
                 variant="h4"
+                component="span"
                 sx={{
                   fontWeight: 800,
                   color: colors.darkGray,
